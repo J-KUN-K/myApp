@@ -1,26 +1,78 @@
-<div class="jumbotron">
-  <h1>This will be userd as a Main space for pic</h1>
-  <p class="lead">
-    <!--<img src="images/yeoman.png" alt="I'm Yeoman"><br>-->
-    Test version for github
-  </p>
-  <!--
-  https://www.w3schools.com/bootstrap/bootstrap_buttons.asp 버튼 옵션 참고
-  -->
-  <p><a class="btn btn-sd btn-info" ng-href="#/">button-2<span class="glyphicon-ok"></span></a></p>
+<div id="main">
+  <div class="row" style="margin:0px 0px 0px 0px;">
+    <div class="main_cont_common main_cont_com h_layer25 col-xs-11 col-md-5">
+      <div class="main_header_icon"><i class="fa fa-laptop fa-3x"></i>&nbsp;&nbsp;<span>Developing</span></div>
+    </div>
+    <div class="main_cont_common main_cont_com h_layer25 col-xs-11 col-md-5">
+      <div class="main_header_icon"><i class="fa fa-won fa-3x"></i>&nbsp;&nbsp;<span>Developing</span></div>
+    </div>
+  </div>
+  <div class="row" style="">
+    <div class="main_cont_common main_cont_com h_layer25 col-xs-11 col-md-5">
+      <div class="main_header_icon"><i class="fa fa-laptop fa-3x"></i>&nbsp;&nbsp;<span>Developing</span></div>
+    </div>
+    <div class="main_cont_common main_cont_com h_layer25 col-xs-11 col-md-5">
+      <div class="main_header_icon"><i class="fa fa-won fa-3x"></i>&nbsp;&nbsp;<span>Developing</span></div>
+    </div>
+  </div>
 </div>
+<style>
+#main {
+  width:100%;
+  height:1200px;
+  background-color:#fff;
+}
 
-<div class="row marketing">
-  <h4>HTML5 Boilerplate</h4>
-  <p>
-    HTML5 Boilerplate is a professional front-end template for building fast, robust, and adaptable web apps or sites.
-  </p>
+.main_cont_common {
+  position:relative;
+  margin:30px auto;
+}
 
-  <h4>Angular</h4>
-  <p>
-    AngularJS is a toolset for building the framework most suited to your application development.
-  </p>
+.main_cont_com {
+  background: url("images/main/main_laptop.jpg") no-repeat center center;
+  background-size: 100% 100%;
+}
 
-  <h4>Karma</h4>
-  <p>Spectacular Test Runner for JavaScript.</p>
-</div>
+.main_header_icon {
+  width:80%;
+  position:absolute;
+  top:15%;
+  left:50%;
+  transform: translate(-35%, -50%);
+  color:#fff;
+}
+
+.main_header_icon span{
+  font-size:3em;
+  font-family: 'Noto Sans', sans-serif;
+}
+
+.h_layer25 {
+  height:250px;
+  border-radius:30px;
+}
+
+@media (max-width: 990px) {
+
+  .main_cont_common {
+    position:relative;
+    float:none;
+
+    }
+  }
+
+@media (min-width: 992px) {
+  .main_cont_common {
+    float:left;
+    margin:30px 4%;
+  }
+}
+
+@media (min-width: 1200px) {
+
+}
+
+
+
+
+</style>
