@@ -9,11 +9,17 @@
  * Main module of the application.
  */
 angular
-  .module('sampleAppApp', ['ngRoute']).
+  .module('sampleApp', [
+  	'ngRoute',
+
+  	'sampleApp.developCtrl']).
   config(function ($routeProvider) {
   	$routeProvider
   	.when('/main', {templateUrl : '/views/main.html', controller : 'mainCtrl' })
-  	.when('/about', {templateUrl : '/views/about.html', controller : 'aboutCtrl'})
+  	.when('/about', {templateUrl : '/views/about.html'})
+  	//.when('/develop', {templateUrl : '/views/thingIdo/develop/develop.html', controller : 'developCtrl' })
+  	.when('/project', {templateUrl : '/views/develop.html', controller : 'developCtrl' })
+  	.when('/project/develop/blog', {templateUrl : '/views/blog.html'})
   	.otherwise({redirectTo: '/main'});
   })
   .controller('mainCtrl', function ($scope, $route) {

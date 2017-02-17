@@ -1,0 +1,132 @@
+<div id="develop">
+	<div id="blog" class="develop_common develop_layer35">
+		<div class="develop_cont_blog" ><i class="fa fa-laptop"></i></div>
+	</div>
+	<div id="server" class="develop_common develop_layer35">
+		<div class="develop_cont_server" ><i class="fa fa-file-o"></i></div>
+	</div>
+	<div id="erp" class="develop_common develop_layer35">
+		<div class="develop_cont_erp" ><i class="fa fa-laptop"></i></div>
+	</div>
+	<div id="calc" class="develop_common develop_layer35">
+		<div class="develop_cont_calc" ><i class="fa fa-file-o"></i></div>
+	</div>
+</div>
+<script>
+$(window).ready(function() {
+	$(".develop_common").mouseenter(function () {
+		//$(this).css({"background-color":"#000","z-index":"10000","opacity":"0.4"});
+		//$(this).children("div").css({"display":"none"});
+		//$(this).children("div").css({"background-size":"100% 100%"});
+		
+	var $a = $(".develop_common");
+	var $b = $(".develop_cont_blog");
+	var $c = $("#develop .develop_common i");
+	$a.animate({'backgroundColor' : "rgb( 20, 20, 20 )","z-index":"10000","opacity":"0.4"},1500);
+	$b.animate({"background-size":"100% 100%"},1500);
+	$c.animate({"left":"20%"},1500);
+
+	$.when($a, $b, $c).then(function () {
+		console.log("111");
+	});
+
+	/*
+	 $(".develop_common").children("div").animate({ "height":"100px"},1000).promise().then(function() {console.log("1111");
+      return $("#develop .develop_common i").animate({  "fontSize":"10em" },1000).promise();
+    }).then(function() {console.log("222");
+      return $(".develop_common").children("div").animate({  "height":"300px" },1000).promise();
+    }).then(function() {console.log("333");
+      return $(".develop_common").children("div").animate({  "height":"400px" },1000).promise();
+    }).then(function() {console.log("444");
+      alert("완료!");
+    });*/
+	});
+});
+
+</script>
+<style>
+#develop {  
+	width:100%;
+	height:100%;
+    background-color:#fff;
+    padding-top:15px;
+}
+
+.develop_common {
+	width:100%;
+	margin:15px 0px;
+	padding-top:15px;
+	position:relative;
+}
+
+#develop .develop_common i{
+	color:#000;
+	font-size:8em;
+	position:absolute;
+}
+
+#develop .develop_common .develop_cont_blog i,
+#develop .develop_common .develop_cont_erp i {
+	top:26%;
+	left:55%;
+}
+
+#develop .develop_common .develop_cont_server i,
+#develop .develop_common .develop_cont_calc i {
+	top:26%;
+	left:25%;
+}
+
+.develop_cont_blog {
+	font-size:20px;
+	word-break:break-all;
+	margin:10px 25% 10px 15%;
+	padding:2% 2% 2% 35%;
+	height:90%;
+	color:#fff;
+	text-align:left;
+	background: url("images/main/main_laptop.jpg") no-repeat;
+	background-size:50% 100%;
+}
+
+.develop_cont_calc{
+	font-size:20px;
+	margin:10px 15% 10px 25%;
+	padding:2% 35% 2% 2%;
+	height:90%;
+	color:#fff;
+	text-align:left;
+	background: url("images/main/main_laptop.jpg") no-repeat;
+	background-position:100% 0%;
+	background-size:50% 100%;
+}
+
+.develop_cont_erp {
+	font-size:20px;
+	word-break:break-all;
+	margin:10px 25% 10px 15%;
+	padding:2% 2% 2% 35%;
+	height:90%;
+	color:#fff;
+	text-align:left;
+	background: url("images/main/main_laptop.jpg") no-repeat;
+	background-size:50% 100%;
+}
+
+.develop_cont_server {
+	font-size:20px;
+	margin:10px 15% 10px 25%;
+	padding:2% 35% 2% 2%;
+	height:90%;
+	color:#fff;
+	text-align:left;
+	background: url("images/main/main_laptop.jpg") no-repeat;
+	background-position:100% 0%;
+	background-size:50% 100%;
+}
+
+.develop_layer35 {
+	height:300px;
+	border-top:3px solid #000;
+}
+</style>

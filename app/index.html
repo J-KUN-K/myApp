@@ -1,5 +1,5 @@
 <!doctype html>
-<html ng-app="sampleAppApp">
+<html ng-app="sampleApp">
   <head>
     <meta charset="utf-8">
     <title></title>
@@ -12,18 +12,22 @@
     <!-- endbower -->
     <!-- endbuild -->
     <!-- build:css(.tmp) styles/main.css -->
+    <link rel="stylesheet" href="styles/common.css">
     <link rel="stylesheet" href="styles/main.css">
+    <link rel="stylesheet" href="styles/develop.css">
     <!-- endbuild -->
-    <!-- custom forms -->
+    <!-- custom cdn -->
     <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css" rel="stylesheet" />
     <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet">
+    <!-- end custom cdn -->
+
     <style>
     /* Header */
-    .header_bg_main {border:1px solid #000;background: url("images/main/main_header.jpg") no-repeat;width:100%;height:500px;background-attachment:fixed;background-size: 100% 70%;background-position: 0% 0%;}
+    .header_bg {background: url("images/main/main_header.jpg") no-repeat;width:100%;height:500px;background-attachment:fixed;background-size: 100% 80%;background-position: 0% -10%;}
     .nav > li > a {padding:10px 20px;}
     .navbar-inverse .navbar-nav > li > a {color:#000;}
     .navbar-header {margin-right:10%;}
-    .container {background-color: #000;width:100%;}
+    .container {background-color: #000;width:100%;opacity:0.9;}
     /* Header End */
     </style>
   </head>
@@ -33,10 +37,10 @@
     <![endif]-->
 
     <!-- Add your site or application content here -->
-    <div class="header_bg_main" style="width:100%;height:400px;"></div>
+    <div class="header_bg" style="width:100%;height:400px;"></div>
     <nav class="navbar navbar-inverse" style="height:70px;background-color:rgba(255,255,255,0.2);position:fixed;top:0;left:0;width:100%;z-index:10002;border:0px transparent">
         <div class="container-fluid" style="height:70px;position:relative;">
-          <div style="position:absolute;top:50%;width:100%; transform: translate(0%, -50%);">
+          <div style="position:absolute;top:50%;width:100%; transform: translate(0%, -40%);">
             <div class="navbar-header">
               <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
                 <span class="icon-bar"></span>
@@ -48,20 +52,22 @@
             <div class="collapse navbar-collapse" id="myNavbar">
               <ul class="nav navbar-nav">
                 <!--<li class="active"><a href="#!/main">Home</a></li>-->
+                <li><a href="#!/main"> main </a></li>
+                <li><a href="#!/about"> About </a></li>
+                <li><a href="#!/project"> develop </a></li>
+                <li><a href="#!/project/develop/blog"> test </a></li>
                 <li class="dropdown">
-                  <a class="dropdown-toggle" data-toggle="dropdown" href="#"> Develop <span class="caret"></span></a>
+                  <a class="dropdown-toggle" data-toggle="dropdown" href=""> etc. <span class="caret"></span></a>
                   <ul class="dropdown-menu">
-                    <li><a href="#">Page 1-1</a></li>
-                    <li><a href="#">Page 1-2</a></li>
-                    <li><a href="#">Page 1-3</a></li>
+                    <li><a href="#">Account</a></li>
+                    <li><a href="#">Math</a></li>
+                    <li><a href="#">Develop</a></li>
                   </ul>
                 </li>
-                <li><a href="#!/main"> Page 3</a></li>
-                <li><a href="#!/about"> About </a></li>
               </ul>
               <ul class="nav navbar-nav navbar-right" style="margin-right:20px;">
                 <!--<li><a href="#"><span class="glyphicon glyphicon-user"></span> Sign Up</a></li>-->
-                <li><a href="#"><span class="glyphicon glyphicon-log-in"></span>&nbsp;&nbsp;Login</a></li>
+                <li><a href="#"><span class="glyphicon glyphicon-log-in"></span>&nbsp;&nbsp;Facebook Login</a></li>
               </ul>
             </div>
           </div>
@@ -86,7 +92,7 @@
 
     <div class="footer">
       <div class="container">
-        <p><span class="glyphicon glyphicon-heart"></span> from the Yeoman team</p>
+        <p><span class="glyphicon glyphicon-heart"></span> will be a line to use</p>
       </div>
     </div>
 
@@ -114,6 +120,7 @@
         <!-- build:js({.tmp,app}) scripts/scripts.js -->
         <script src="scripts/app.js"></script>
         <script src="scripts/controllers/main.js"></script>
+        <script src="scripts/controllers/develop.js"></script>
         <!-- endbuild -->
 </body>
 </html>

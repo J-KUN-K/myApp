@@ -1,2 +1,66 @@
 
 
+#main {
+  width:100%;
+  height:100%;
+  background-color:#000;
+}
+
+.main_cont_common {
+  position:relative;
+  margin:30px auto;
+}
+
+.main_cont_com {
+  background: url("images/main/main_laptop.jpg") no-repeat center center;
+  background-size: 100% 100%;
+}
+
+.main_cont_acc {
+  background: url("images/main/main_account.jpg") no-repeat center center;
+  background-size: 100% 100%;
+}
+
+.main_cont_math {
+  background: url("images/main/main_math2.jpg") no-repeat center center;
+  background-size: 100% 100%;
+}
+
+.main_header_icon {
+  width:80%;
+  position:absolute;
+  top:15%;
+  left:50%;
+  transform: translate(-30%, -50%);
+  color:#fff;
+}
+
+.main_header_icon span{
+  font-size:3em;
+  font-family: 'Noto Sans', sans-serif;
+}
+
+.h_layer25 {
+  height:250px;
+  border-radius:30px;
+}
+
+@media (max-width: 990px) {
+
+  .main_cont_common {
+    position:relative;
+    float:none;
+
+    }
+  }
+
+@media (min-width: 992px) {
+  .main_cont_common {
+    float:left;
+    margin:30px 4%;
+  }
+}
+
+@media (min-width: 1200px) {
+
+}

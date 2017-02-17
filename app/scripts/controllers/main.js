@@ -7,7 +7,7 @@
  * # MainCtrl
  * Controller of the sampleAppApp
  */
-angular.module('sampleAppApp')
+angular.module('sampleApp')
   .controller('MainCtrl', function () {
     this.awesomeThings = [
       'HTML5 Boilerplate',
