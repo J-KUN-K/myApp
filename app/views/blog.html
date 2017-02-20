@@ -11,6 +11,7 @@
 			  이용해 라인을 만들것현재는 일반  P 태그 추후 앵귤러 directive를 이용해 라인을 만들것현재는 일반  
 			  P 태그 추후 앵귤러 directive를 이용해 라인을 만들것</p>
 		</section>
+		<div hello name="angularJS"></div>
 	</div>
 </div>
 <style>
@@ -25,6 +26,33 @@
 <script>
 
 $(window).ready(function () {
-	
+
 });
+
+/* ===== test ===== */
+function parseNum(num) {
+	//if (instanceof num)) throw new Error("Expecting a string");
+	console.log(typeof num === "string");
+
+	if(typeof num !== "string") {console.log("Expecting a string");return false;}
+	var a;
+	
+	a = parseInt(num, 10);
+	console.log(typeof a);
+
+	if (typeof a !== "number"){
+	//	console.log(["Could not parse num", num].join(' '));
+	}
+
+	return a;
+}
+
+function fail(thing){
+	console.log("Error massage " + thing );
+}
+
+console.log(parseNum(10));
+console.log(parseNum("20"));
+console.log(parseNum("aaa"));
+
 </script>

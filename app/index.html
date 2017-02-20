@@ -17,8 +17,13 @@
     <link rel="stylesheet" href="styles/develop.css">
     <!-- endbuild -->
     <!-- custom cdn -->
+    <!-- css -->
     <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css" rel="stylesheet" />
+    <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+    <!-- font -->
     <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet">
+    <!-- js -->
+    <!--<script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>-->
     <!-- end custom cdn -->
 
     <style>
@@ -26,8 +31,8 @@
     .header_bg {background: url("images/main/main_header.jpg") no-repeat;width:100%;height:500px;background-attachment:fixed;background-size: 100% 80%;background-position: 0% -10%;}
     .nav > li > a {padding:10px 20px;}
     .navbar-inverse .navbar-nav > li > a {color:#000;}
-    .navbar-header {margin-right:10%;}
-    .container {background-color: #000;width:100%;opacity:0.9;}
+    .navbar-header {margin-right:2%;}
+    .container {background-color: #fff;width:100%;opacity:0.9;}
     /* Header End */
     </style>
   </head>
@@ -56,6 +61,7 @@
                 <li><a href="#!/about"> About </a></li>
                 <li><a href="#!/project"> develop </a></li>
                 <li><a href="#!/project/develop/blog"> test </a></li>
+                <li><a href="#!/project/develop/posts"> test </a></li>
                 <li class="dropdown">
                   <a class="dropdown-toggle" data-toggle="dropdown" href=""> etc. <span class="caret"></span></a>
                   <ul class="dropdown-menu">
@@ -73,11 +79,12 @@
           </div>
         </div>
       </nav>
-  
     <div class="container">
 
     <!--<div ng-include="'views/main.html'" ng-controller="MainCtrl"></div>-->
+
     <ng-view></ng-view>
+
     <div>현재 라우트 정보: {{route.current}}</div>
     <ul>
       <li ng-repeat="(key, value) in routes">
@@ -121,6 +128,8 @@
         <script src="scripts/app.js"></script>
         <script src="scripts/controllers/main.js"></script>
         <script src="scripts/controllers/develop.js"></script>
+        <script src="scripts/controllers/blog.js"></script>
+        <script src="scripts/controllers/posts.js"></script>
         <!-- endbuild -->
 </body>
 </html>

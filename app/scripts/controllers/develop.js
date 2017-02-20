@@ -8,6 +8,9 @@
  * Controller of the sampleAppApp
  */
 angular.module('sampleApp.developCtrl',[])
-  .controller('developCtrl', function () {
+	.directive('hello', function () {
+		return function (scope, iElement) {}
+	})
+	.controller('developCtrl', function () {
 
   });

@@ -1,6 +1,6 @@
 <div id="develop">
-	<div id="blog" class="develop_common develop_layer35">
-		<div class="develop_cont_blog" ><i class="fa fa-laptop"></i></div>
+	<div id="blog" class="develop_common develop_layer35 ui-widget-content ui-corner-all">
+		<div class="develop_cont_blog ui-widget-content ui-corner-all" ><i class="fa fa-laptop"></i></div>
 	</div>
 	<div id="server" class="develop_common develop_layer35">
 		<div class="develop_cont_server" ><i class="fa fa-file-o"></i></div>
@@ -19,12 +19,12 @@ $(window).ready(function() {
 		//$(this).children("div").css({"display":"none"});
 		//$(this).children("div").css({"background-size":"100% 100%"});
 		
-	var $a = $(".develop_common");
-	var $b = $(".develop_cont_blog");
-	var $c = $("#develop .develop_common i");
-	$a.animate({'backgroundColor' : "rgb( 20, 20, 20 )","z-index":"10000","opacity":"0.4"},1500);
-	$b.animate({"background-size":"100% 100%"},1500);
-	$c.animate({"left":"20%"},1500);
+	var a = $(".develop_common");
+	var b = $(".develop_cont_blog");
+	var c = $("#develop .develop_common i");
+	a.animate({backgroundColor:"red","z-index":"10000","opacity":"0.4"},1500);
+	b.animate({backgroundSize:"100% 100%","z-index":"5000","opacity":"0.8"},1500);
+	c.animate({"left":"20%"},1500);
 
 	$.when($a, $b, $c).then(function () {
 		console.log("111");
